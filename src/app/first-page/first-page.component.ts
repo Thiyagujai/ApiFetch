@@ -8,18 +8,26 @@ import {HttpClient} from '@angular/common/http';
 })
 export class FirstPageComponent implements OnInit {
 
-apiData:any;
-dataToDisplay:any;
+//apiData:any;
+//dataToDisplay:any;
+
+dogApiData:any;
+apiMessage:any;
+dog1:any;
+dog2:any;
+
 constructor(private httpClient: HttpClient) { 
-this.apiData=[];
+//this.apiData=[];
+this.dogApiData=[];
 
 }
 
   ngOnInit()  {
- this.getApiData()
+ //this.getApiData()
+ this.getdogApiData()
   }
 
-  getApiData(){
+/**getApiData(){
  this.httpClient.get('https://datausa.io/api/data?drilldowns=Nation&measures=Population').subscribe((result:any)=>
 {
 	console.log(result);
@@ -33,6 +41,35 @@ return apiInfo;
 })
 console.log(this.dataToDisplay);
 })
+}**/
+
+getdogApiData(){
+this.httpClient.get('https://dog.ceo/api/breeds/list/all').subscribe((dogData:any)=>
+{
+console.log(dogData);
+this.dogApiData= dogData;
+const message= this.dogApiData.message; 
+console.log(message);
+
+let dataItem= Object.entries(message)
+console.log(dataItem);
+this.dog1 = dataItem.map((v)=>{
+console.log(v)
+	return v;
+})
+
+this.dog2 = dataItem.map((v)=>{
+console.log(v[1])
+return v[1];
+})
+})
 
 }
+
+
+
 }
+
+
+
+

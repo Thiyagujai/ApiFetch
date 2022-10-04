@@ -5,16 +5,52 @@ box-sizing:border-box;
 }
 .parent{
 display:flex;
-height:auto;
+height:100vh;
 width:100vw;
-background-color:lightblue;
+flex-direction:column;
+}
+.images{
+width: 100%;
+height: 100%;
+background-size: cover;
 }
 .child1{
 margin:5rem;
 width:100%;
 }
-.data-container{
-gap:2rem;
-margin-top:5rem;
+.child2 {
+display:flex;
+flex-direction:column;
+background-color:white;
+height:50%;
+width:30%;
+border-radius:15px;
+gap:20px;
+padding:20px;
+}
+.dropdown-button{
+width:70px;
+height:30px;
+border-radius:7px;
+}
+.form-align{
+position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+}
+.year{
+
+
 }
 
+.align{
+padding:1rem 2rem;
+background-color:tomato;
+border-radius:10px;
+display:flex;
+gap:1rem;
+}

@@ -1,17 +1,32 @@
 <div class="parent">
+<img  class="images" src="../assets/population.jpeg">
 
 	<div class="child1">
-		<h2>US Population</h2>
-		<div *ngFor="let item of dataToDisplay" class="data-container">
-		
-			<div class="data">
-				<p>Country name: {{item.Nation}}</p>
-		 <p>Year: {{item.Year}}</p>
-		<p>Population: {{item.Population}}</p>
-			</div>
-			</div>
+
+		<div class="child2">
+
+		<h2>Dog Breeds</h2>
+		<div>
+			<form class="form-align ">
+
+				<label class="year">Choose the year </label>
+				<select class="dropdown-button">
+					<option class="align"  *ngFor="let item of dog1" [value]= >
+					{{item[0]}}
+					</option>
+
+				</select>
 
 
+			</form>
+		</div>
+		</div>
+	
 	</div>
 </div>
 
+
+<div class="align"*ngFor="let item of dog1">
+	<p>{{item[0]}}</p>
+	<p>{{item[1]}}</p>
+</div>
