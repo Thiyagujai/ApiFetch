@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
 @Component({
   selector: 'app-first-page',
   templateUrl: './first-page.component.html',
@@ -53,9 +52,10 @@ console.log(message);
 
 let dataItem= Object.entries(message)
 console.log(dataItem);
+
 this.dog1 = dataItem.map((v)=>{
 console.log(v)
-	return v;
+return v;
 })
 
 this.dog2 = dataItem.map((v)=>{

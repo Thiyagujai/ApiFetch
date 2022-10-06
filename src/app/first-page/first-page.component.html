@@ -1,32 +1,42 @@
 <div class="parent">
-<img  class="images" src="../assets/population.jpeg">
-
 	<div class="child1">
 
-		<div class="child2">
-
-		<h2>Dog Breeds</h2>
-		<div>
-			<form class="form-align ">
-
-				<label class="year">Choose the year </label>
-				<select class="dropdown-button">
-					<option class="align"  *ngFor="let item of dog1" [value]= >
-					{{item[0]}}
-					</option>
-
-				</select>
-
-
-			</form>
+		<div class="header">
+			<div class="text1">
+			Dog breeds
+			</div>
+			<div class="text2">
+				<a href ="https://www.thesprucepets.com/types-of-dog-breeds-4688776">Categories</a>
+				<a href ="https://www.goodhousekeeping.com/life/pets/advice/g1921/large-dog-breeds/">Find the breeds</a>
+				<a href ="https://www.shutterfly.com/ideas/dog-quotes/">Inspiration</a>
+				<a href ="https://dogstudio.co/">Studio</a>
+			</div>
 		</div>
+		
+		<div class="split">
+			<div class="image">
+			<img  class="images" src="../assets/dog1.png">
+			</div>
+			<div class="text">
+				<div class="heading">
+					<p>Dogs Varieties</p>
+				</div>
+				<div class="quotes">
+					<p>You ever wonder what your dog is thinking? What he or she wants to say? We’d all love it if our dogs could talk — some of the time, at least. (If nothing else we’d be guaranteed some good dog quotes!) In lieu of that, we have some quotes about dogs, by the humans who love them. They’re like family to us.</p>
+				</div>
+			
+			</div>
 		</div>
-	
+		<div class="gridcard">
+		<div  *ngFor="let dog of dog1; let i = index">
+			<img src="../assets/img1.jpeg" class="img">
+			
+			<p>{{dog[0]}}</p>
+			<p *ngIf="dog[1].length<=2">{{dog[1]}}</p>
+		</div>
+			
+		</div>
 	</div>
 </div>
 
 
-<div class="align"*ngFor="let item of dog1">
-	<p>{{item[0]}}</p>
-	<p>{{item[1]}}</p>
-</div>
