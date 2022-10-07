@@ -3,7 +3,7 @@
 
 		<div class="header">
 			<div class="text1">
-			Dog breeds
+				<p>Dog Breeds</p>
 			</div>
 			<div class="text2">
 				<a href ="https://www.thesprucepets.com/types-of-dog-breeds-4688776">Categories</a>
@@ -28,13 +28,13 @@
 			</div>
 		</div>
 		<div class="gridcard">
-		<div  *ngFor="let dog of dog1; let i = index">
+
+		<div  *ngFor="let dog of dog1; let i = index" class="cardhover">
 			<img src="../assets/img1.jpeg" class="img">
 			
 			<p>{{dog[0]}}</p>
-			<p *ngIf="dog[1].length<=2">{{dog[1]}}</p>
+			<p *ngIf="dog[1].length<=1">{{dog[1]}}</p>
 		</div>
-			
 		</div>
 	</div>
 </div>
